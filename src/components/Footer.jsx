@@ -6,7 +6,7 @@ const Footer = () => {
         <footer className="bg-tertiary text-primary border-t border-white/10 mt-auto">
             <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
                 <div className="mb-4 md:mb-0">
-                    <span className="font-bold text-lg tracking-tighter">Portfolio.</span>
+                    <span className="font-bold text-lg tracking-tighter">Thiago Masson.</span>
                     <p className="text-gray-400 text-sm mt-1 font-medium">Creando experiencias digitales.</p>
                 </div>
 

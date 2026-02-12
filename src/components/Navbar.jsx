@@ -47,7 +47,7 @@ const Navbar = () => {
                     <div className="md:hidden">
                         <button
                             onClick={toggleMenu}
-                            className="text-primary hover:text-secondary focus:outline-none"
+                            className="text-tertiary hover:text-secondary focus:outline-none"
                         >
                             {isOpen ? <HiX size={24} /> : <HiMenuAlt3 size={24} />}
                         </button>
