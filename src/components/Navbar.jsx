@@ -8,8 +8,8 @@ const Navbar = () => {
     const toggleMenu = () => setIsOpen(!isOpen);
 
     const menuVariants = {
-        closed: { opacity: 0, x: "100%" },
-        open: { opacity: 1, x: 0, transition: { type: "tween", duration: 0.8 } }
+        closed: { opacity: 0, scale: 0.95, y: -20, transition: { duration: 0.2 } },
+        open: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.2 } }
     };
 
     const navLinks = [
@@ -20,11 +20,11 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className="fixed w-full bg-tertiary/30 backdrop-blur-md z-50 transition-all duration-300">
+        <nav className="fixed w-full bg-tertiary shadow-md z-50 transition-all duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
-                    <div className="flex-shrink-0 cursor-pointer text-tertiary">
+                    <div className="flex-shrink-0 cursor-pointer text-primary">
                         <span className="font-bold text-2xl tracking-tighter">Thiago Masson</span>
                     </div>
 
@@ -35,7 +35,7 @@ const Navbar = () => {
                                 <a
                                     key={link.title}
                                     href={link.href}
-                                    className="text-tertiary hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium"
+                                    className="text-primary hover:text-secondary transition-colors px-3 py-2 rounded-md text-sm font-medium"
                                 >
                                     {link.title}
                                 </a>
@@ -47,7 +47,7 @@ const Navbar = () => {
                     <div className="md:hidden">
                         <button
                             onClick={toggleMenu}
-                            className="text-tertiary hover:text-secondary focus:outline-none"
+                            className="text-primary hover:text-secondary focus:outline-none"
                         >
                             {isOpen ? <HiX size={24} /> : <HiMenuAlt3 size={24} />}
                         </button>
@@ -63,25 +63,18 @@ const Navbar = () => {
                         animate="open"
                         exit="closed"
                         variants={menuVariants}
-                        className="fixed inset-y-0 right-0 w-64 bg-tertiary shadow-xl p-4 md:hidden flex flex-col space-y-4"
+                        className="absolute top-16 left-0 w-full bg-primary shadow-xl md:hidden flex flex-col items-center py-4 space-y-4 border-t border-tertiary/10"
                     >
-                        <div className="flex justify-end">
-                            <button onClick={toggleMenu} className="text-primary hover:text-secondary">
-                                <HiX size={24} />
-                            </button>
-                        </div>
-                        <div className="mt-8 flex flex-col space-y-4">
-                            {navLinks.map((link) => (
-                                <a
-                                    key={link.title}
-                                    href={link.href}
-                                    onClick={toggleMenu}
-                                    className="text-primary hover:text-secondary text-lg font-medium py-2 border-b border-white/10"
-                                >
-                                    {link.title}
-                                </a>
-                            ))}
-                        </div>
+                        {navLinks.map((link) => (
+                            <a
+                                key={link.title}
+                                href={link.href}
+                                onClick={toggleMenu}
+                                className="text-tertiary hover:text-secondary text-lg font-medium py-2 w-full text-center hover:bg-tertiary transition-colors"
+                            >
+                                {link.title}
+                            </a>
+                        ))}
                     </motion.div>
                 )}
             </AnimatePresence>
