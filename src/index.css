@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/* Importar fuente Inter desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap');
+
+@theme {
+    --font-sans: "Inter", sans-serif;
+
+    /* Animaciones suaves */
+    --animate-fade-in: fade-in 0.5s ease-out forwards;
+    --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;
+
+    --color-primary: #F7F4EB;
+    --color-secondary: #C2CBD4;
+    --color-tertiary: #313852;
+
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fade-in-up {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: "Inter", sans-serif;
+        @apply antialiased text-tertiary bg-primary selection:bg-tertiary selection:text-primary font-bold;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-black tracking-tight;
+    }
+
+    .text-secondary-highlight {
+        @apply font-normal text-secondary;
+    }
+}
