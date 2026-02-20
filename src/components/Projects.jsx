@@ -21,7 +21,7 @@ const projectsData = [
         image: hospitalLitoImg,
         description: "Sistema de gestión hospitalaria enfocada en la administración eficiente de recursos físicos (camas) y humanos (enfermeras).",
         tech: ["Java", "Spring Boot", "Thymeleaf", "Bootstrap", "PostgreSQL"],
-        links: { github: "https://github.com/Thiagom05/proyecto-hospital-lito.git", live: "https://proyecto-hospital-lito-production.up.railway.app/" }
+        links: { github: "https://github.com/Thiagom05/proyecto-hospital-lito.git", live: "https://hospital-lito.onrender.com/" }
     },
     {
         id: 3,
