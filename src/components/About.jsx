@@ -13,7 +13,7 @@ const skillsData = [
     },
     {
         category: "Herramientas",
-        skills: ["Git & GitHub", "Docker", "Postman", "Render", "Vercel", "Railway", "NeonDB"]
+        skills: ["Git & GitHub", "Docker", "Postman", "Render", "Vercel", "Railway", "NeonDB", "Premiere Pro"]
     }
 ];
 
