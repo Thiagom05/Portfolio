@@ -30,6 +30,16 @@ const projectsData = [
     },
     {
         id: 3,
+        title: "Próximamente...",
+        category: " ",
+        image: null,
+        description: " ",
+        type: "web",
+        tech: [" "],
+        links: { github: " ", live: " " }
+    },
+    {
+        id: 4,
         title: "5 videos de youtube para volverte fuerte",
         category: "Premiere Pro",
         image: videoImg,
@@ -40,7 +50,7 @@ const projectsData = [
         videoUrl: "https://www.instagram.com/reel/DRznFX0Dhr4/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
     },
     {
-        id: 4,
+        id: 5,
         title: "Datos sobre la creatina",
         category: "Premiere Pro",
         image: video2Img,
@@ -51,7 +61,7 @@ const projectsData = [
         videoUrl: "https://www.instagram.com/reel/DRfqYSPgZ86/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
     },
     {
-        id: 5,
+        id: 6,
         title: "Perder peso comiendo mas",
         category: "Premiere Pro",
         image: video3Img,
